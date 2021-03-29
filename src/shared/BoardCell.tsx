@@ -1,5 +1,5 @@
-import React, {useCallback} from "react";
-import {Box, useTheme} from "@material-ui/core";
+import React, { useCallback } from 'react';
+import { Box, useTheme } from '@material-ui/core';
 
 export interface IBoardCellProps {
   id?: string;

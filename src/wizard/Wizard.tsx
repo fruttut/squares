@@ -1,10 +1,10 @@
-import {Box, Step, StepLabel, Stepper, Typography} from "@material-ui/core";
-import {ChooseBoardSizeStep} from "./steps/ChooseBoardSizeStep";
-import {AddPlayersStep} from "./steps/AddPlayersStep";
-import {PickTurnsStep} from "./steps/PickTurnsStep";
-import React, {useEffect} from "react";
-import {useWizard} from "./WizardContext";
-import {IGame} from "../types";
+import { Box, Step, StepLabel, Stepper, Typography } from '@material-ui/core';
+import { ChooseBoardSizeStep } from './steps/ChooseBoardSizeStep';
+import { AddPlayersStep } from './steps/AddPlayersStep';
+import { PickTurnsStep } from './steps/PickTurnsStep';
+import React, { useEffect } from 'react';
+import { useWizard } from './WizardContext';
+import { IGame } from '../types';
 
 export interface IWizardProps {
   onSubmit?: (data: IGame) => void;
@@ -28,7 +28,9 @@ export const Wizard: React.FC<IWizardProps> = ({ onSubmit }) => {
 
   return (
     <Box display="flex" flexDirection="column" flexGrow={1}>
-      <Typography variant="h1" align="center">Welcome to Squares!</Typography>
+      <Typography variant="h1" align="center">
+        Welcome to Squares!
+      </Typography>
       <Stepper activeStep={step}>
         <Step>
           <StepLabel>Choose board size</StepLabel>
@@ -47,4 +49,4 @@ export const Wizard: React.FC<IWizardProps> = ({ onSubmit }) => {
       </Box>
     </Box>
   );
-}
+};

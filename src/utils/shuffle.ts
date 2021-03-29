@@ -1,4 +1,4 @@
-import {swapItems} from "./swap";
+import { swapItems } from './swap';
 
 export const shuffle = <T>(arr: T[]) => {
   if (arr.length < 2) {

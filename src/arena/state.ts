@@ -1,6 +1,6 @@
-import {ICoords, IGame, IPlayers} from "../types";
-import {createMatrix} from "../utils/createMatrix";
-import {populateObject} from "../utils/populateObject";
+import { ICoords, IGame, IPlayers } from '../types';
+import { createMatrix } from '../utils/createMatrix';
+import { populateObject } from '../utils/populateObject';
 
 type CellId = string;
 type GroupId = string;
@@ -61,7 +61,10 @@ export const initArenaState = (game: IGame) => {
       groups: populateObject({}, cellIds, null),
     },
     board: {
-      cells: createMatrix<string>(game.dim, (row: number, col: number) => `${row}_${col}`),
+      cells: createMatrix<string>(
+        game.dim,
+        (row: number, col: number) => `${row}_${col}`
+      ),
       coords: initCoords(game.dim),
     },
     groups: {

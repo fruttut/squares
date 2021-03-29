@@ -1,7 +1,10 @@
-import {IWizardState} from "./state";
-import {EWizardActionTypes, WizardAction} from "./actions";
-import {excludeItemFromArray, excludePropertyFromObject} from "../utils/exclude";
-import {shiftDown, shiftUp} from "../utils/shiftUpDown";
+import { IWizardState } from './state';
+import { EWizardActionTypes, WizardAction } from './actions';
+import {
+  excludeItemFromArray,
+  excludePropertyFromObject,
+} from '../utils/exclude';
+import { shiftDown, shiftUp } from '../utils/shiftUpDown';
 
 export const wizardReducer = (state: IWizardState, action: WizardAction) => {
   switch (action.type) {
@@ -27,8 +30,14 @@ export const wizardReducer = (state: IWizardState, action: WizardAction) => {
         players: {
           ...state.players,
           ids: [...newIds],
-          names: { ...state.players.names, [action.player.id]: action.player.name },
-          colors: { ...state.players.colors, [action.player.id]: action.player.color },
+          names: {
+            ...state.players.names,
+            [action.player.id]: action.player.name,
+          },
+          colors: {
+            ...state.players.colors,
+            [action.player.id]: action.player.color,
+          },
         },
         turns: [...newIds],
       };

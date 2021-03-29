@@ -18,12 +18,29 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:raw": "eslint --ignore-pattern '/node_modules/' '{*,src/**/*}.{js,ts,tsx}'",
+    "lint": "yarn run -s lint:raw || true",
+    "pretty": "prettier --write '{*,{src,public}/**/*}.{js,json,ts,tsx,html}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{*,src/**/*}.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --ignore-pattern '/node_modules/'"
+    ],
+    "{*,{src,public}/**/*}.{json,html}": [
+      "prettier --write"
     ]
   },
   "browserslist": {
@@ -37,5 +54,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^5.2.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
   }
 }

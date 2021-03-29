@@ -14,6 +14,4 @@ export interface ArenaPassMoveAction {
   readonly type: EArenaActionTypes.PASS_MOVE;
 }
 
-export type ArenaAction =
-  ArenaPaintCellAction |
-  ArenaPassMoveAction;
+export type ArenaAction = ArenaPaintCellAction | ArenaPassMoveAction;

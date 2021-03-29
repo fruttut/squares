@@ -3,10 +3,7 @@
     "baseUrl": "./",
     "outDir": "./build/",
     "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "es2019"
-    ],
+    "lib": ["dom", "es2019"],
     "target": "es2019",
     "module": "esnext",
     "moduleResolution": "node",
@@ -18,13 +15,8 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "node_modules/@types",
-      "src/typings"
-    ],
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types", "src/typings"],
     "allowJs": true,
     "esModuleInterop": true,
     "strict": true,
@@ -34,10 +26,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }

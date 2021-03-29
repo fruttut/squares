@@ -1,9 +1,12 @@
-import React, {Dispatch, useContext} from 'react';
-import {IArenaState} from "./state";
-import {ArenaAction} from "./actions";
-import {noop} from "../utils/noop";
+import React, { Dispatch, useContext } from 'react';
+import { IArenaState } from './state';
+import { ArenaAction } from './actions';
+import { noop } from '../utils/noop';
 
-export type IArenaContext = [state: IArenaState, dispatch: Dispatch<ArenaAction>];
+export type IArenaContext = [
+  state: IArenaState,
+  dispatch: Dispatch<ArenaAction>
+];
 
 export const ArenaContext = React.createContext<IArenaContext>([
   {

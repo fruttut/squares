@@ -1,9 +1,12 @@
-import React, {Dispatch, useContext} from "react";
-import {IWizardState} from "./state";
-import {WizardAction} from "./actions";
-import {noop} from "../utils/noop";
+import React, { Dispatch, useContext } from 'react';
+import { IWizardState } from './state';
+import { WizardAction } from './actions';
+import { noop } from '../utils/noop';
 
-export type IWizardContext = [state: IWizardState, dispatch: Dispatch<WizardAction>];
+export type IWizardContext = [
+  state: IWizardState,
+  dispatch: Dispatch<WizardAction>
+];
 
 export const WizardContext = React.createContext<IWizardContext>([
   {

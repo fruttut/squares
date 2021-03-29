@@ -1,4 +1,4 @@
-import {IPlayer} from "../types";
+import { IPlayer } from '../types';
 
 export enum EWizardActionTypes {
   GO_TO_NEXT_STEP = 'GO_TO_NEXT_STEP',
@@ -69,14 +69,14 @@ export interface WizardSubmit {
 }
 
 export type WizardAction =
-  WizardGoToNextStepAction |
-  WizardGoToPreviousStepAction |
-  WizardSetBoardDimensionAction |
-  WizardAddPlayerAction |
-  WizardRemovePlayerAction |
-  WizardSetPlayerNameAction |
-  WizardSetPlayerColorAction |
-  WizardRaiseTurnAction |
-  WizardSinkTurnAction |
-  WizardSetTurnsAction |
-  WizardSubmit;
+  | WizardGoToNextStepAction
+  | WizardGoToPreviousStepAction
+  | WizardSetBoardDimensionAction
+  | WizardAddPlayerAction
+  | WizardRemovePlayerAction
+  | WizardSetPlayerNameAction
+  | WizardSetPlayerColorAction
+  | WizardRaiseTurnAction
+  | WizardSinkTurnAction
+  | WizardSetTurnsAction
+  | WizardSubmit;

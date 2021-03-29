@@ -1,4 +1,4 @@
-import {createMuiTheme, fade} from "@material-ui/core";
+import { createMuiTheme, fade } from '@material-ui/core';
 
 export const theme = createMuiTheme({
   overrides: {

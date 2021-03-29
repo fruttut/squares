@@ -1,5 +1,5 @@
-import {AVAILABLE_PLAYER_COLORS, PLAYERS_MIN_NUMBER} from "../constants";
-import {IPlayer, IPlayers} from "../types";
+import { AVAILABLE_PLAYER_COLORS, PLAYERS_MIN_NUMBER } from '../constants';
+import { IPlayer, IPlayers } from '../types';
 
 export const createPlayer = (num: number, color: string) => ({
   id: String(num),

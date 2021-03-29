@@ -1,13 +1,13 @@
-import React, {useCallback, useState} from 'react';
-import {MuiThemeProvider,} from "@material-ui/core";
-import {theme} from "./theme/theme";
-import {GlobalStyles} from "./theme/GlobalStyles";
-import {ERetryOptions, IGame, IGameResult} from "./types";
-import {Wizard} from "./wizard/Wizard";
-import {WizardContextProvider} from "./wizard/WizardContextProvider";
-import {ArenaContextProvider} from "./arena/ArenaContextProvider";
-import {Arena} from "./arena/Arena";
-import {WinnerScreen} from "./WinnerScreen";
+import React, { useCallback, useState } from 'react';
+import { MuiThemeProvider } from '@material-ui/core';
+import { theme } from './theme/theme';
+import { GlobalStyles } from './theme/GlobalStyles';
+import { ERetryOptions, IGame, IGameResult } from './types';
+import { Wizard } from './wizard/Wizard';
+import { WizardContextProvider } from './wizard/WizardContextProvider';
+import { ArenaContextProvider } from './arena/ArenaContextProvider';
+import { Arena } from './arena/Arena';
+import { WinnerScreen } from './WinnerScreen';
 
 const App: React.FC = () => {
   const [game, setGame] = useState<IGame | null>(null);
@@ -46,6 +46,6 @@ const App: React.FC = () => {
       )}
     </MuiThemeProvider>
   );
-}
+};
 
 export default App;

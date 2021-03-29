@@ -1,4 +1,8 @@
-export const populateObject = <T>(obj: Record<string, T>, keys: string[], val: T) => {
+export const populateObject = <T>(
+  obj: Record<string, T>,
+  keys: string[],
+  val: T
+) => {
   return {
     ...obj,
     ...keys.reduce<Record<string, T>>((acc, key) => {
@@ -6,4 +10,4 @@ export const populateObject = <T>(obj: Record<string, T>, keys: string[], val: T
       return acc;
     }, {}),
   };
-}
+};
