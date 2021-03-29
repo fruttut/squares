@@ -44,7 +44,7 @@ export const Arena: React.FC<IArenaProps> = ({ onEnd }) => {
               p={1}
               mt={index === 0 ? 0 : 2}
               borderRadius={8}
-              border={currentPlayerId === id ? '1px solid black' : 'transparent'}
+              border={`1px solid ${currentPlayerId === id ? 'black' : 'transparent'}`}
             >
               <Box display="flex" flexDirection="row" alignItems="center">
                 <Box width={50} height={50} bgcolor={players.colors[id]} mr={2} />
